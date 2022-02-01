@@ -73,7 +73,7 @@ namespace LKS_Hotel
             if (reader.HasRows)
             {
                 connection.Close();
-                MessageBox.Show("Room type's name was used!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Name was used!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             connection.Close();
@@ -97,7 +97,7 @@ namespace LKS_Hotel
                 if (Convert.ToInt32(reader["id"]) != id)
                 {
                     connection.Close();
-                    MessageBox.Show("Room type's name was used!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Name was used!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
             }
@@ -194,25 +194,28 @@ namespace LKS_Hotel
         {
             if (dataGridView1.CurrentRow.Selected == true)
             {
-                SqlCommand command = new SqlCommand("delete from item where id = " + id, connection);
-                try
+                DialogResult result = MessageBox.Show("Are you sure to delete it?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    connection.Open();
-                    command.ExecuteNonQuery();
-                    MessageBox.Show("Successfully deleted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
-                    loadgrid();
-                    dis();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally
-                {
-                    connection.Close();
-                }
-
+                        SqlCommand command = new SqlCommand("delete from item where id = " + id, connection);
+                    try
+                    {
+                        connection.Open();
+                        command.ExecuteNonQuery();
+                        MessageBox.Show("Successfully deleted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                        loadgrid();
+                        dis();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
+                }   
             }
             else
             {

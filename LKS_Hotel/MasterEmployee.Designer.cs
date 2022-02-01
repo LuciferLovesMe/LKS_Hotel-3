@@ -94,6 +94,7 @@ namespace LKS_Hotel
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(321, 23);
             this.textBox2.TabIndex = 55;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label12
             // 
@@ -123,6 +124,7 @@ namespace LKS_Hotel
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(175, 23);
             this.textBox1.TabIndex = 52;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // dataGridView1
             // 
@@ -135,6 +137,7 @@ namespace LKS_Hotel
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(715, 199);
             this.dataGridView1.TabIndex = 51;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // btn_cancel
             // 
@@ -148,6 +151,7 @@ namespace LKS_Hotel
             this.btn_cancel.TabIndex = 50;
             this.btn_cancel.Text = "Cancel";
             this.btn_cancel.UseVisualStyleBackColor = false;
+            this.btn_cancel.Click += new System.EventHandler(this.btn_cancel_Click);
             // 
             // btn_save
             // 
@@ -161,6 +165,7 @@ namespace LKS_Hotel
             this.btn_save.TabIndex = 49;
             this.btn_save.Text = "Save";
             this.btn_save.UseVisualStyleBackColor = false;
+            this.btn_save.Click += new System.EventHandler(this.btn_save_Click);
             // 
             // btn_del
             // 
@@ -174,6 +179,7 @@ namespace LKS_Hotel
             this.btn_del.TabIndex = 48;
             this.btn_del.Text = "Delete";
             this.btn_del.UseVisualStyleBackColor = false;
+            this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
             // 
             // btn_edit
             // 
@@ -187,6 +193,7 @@ namespace LKS_Hotel
             this.btn_edit.TabIndex = 47;
             this.btn_edit.Text = "Edit";
             this.btn_edit.UseVisualStyleBackColor = false;
+            this.btn_edit.Click += new System.EventHandler(this.btn_edit_Click);
             // 
             // btn_insert
             // 
@@ -200,13 +207,14 @@ namespace LKS_Hotel
             this.btn_insert.TabIndex = 46;
             this.btn_insert.Text = "Insert";
             this.btn_insert.UseVisualStyleBackColor = false;
+            this.btn_insert.Click += new System.EventHandler(this.btn_insert_Click);
             // 
             // lbltime
             // 
             this.lbltime.AutoSize = true;
             this.lbltime.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltime.ForeColor = System.Drawing.Color.Black;
-            this.lbltime.Location = new System.Drawing.Point(238, -13);
+            this.lbltime.Location = new System.Drawing.Point(238, 1);
             this.lbltime.Name = "lbltime";
             this.lbltime.Size = new System.Drawing.Size(44, 16);
             this.lbltime.TabIndex = 45;
@@ -218,7 +226,7 @@ namespace LKS_Hotel
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(961, -13);
+            this.button2.Location = new System.Drawing.Point(961, -1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
             this.button2.TabIndex = 44;
@@ -451,6 +459,7 @@ namespace LKS_Hotel
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(321, 23);
             this.textBox3.TabIndex = 57;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label13
             // 
@@ -569,6 +578,7 @@ namespace LKS_Hotel
             this.button3.TabIndex = 72;
             this.button3.Text = "Upload";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // pictureBox1
             // 
@@ -598,6 +608,7 @@ namespace LKS_Hotel
             this.checkBox1.TabIndex = 73;
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // dateTimePicker1
             // 
