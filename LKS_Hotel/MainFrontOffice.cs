@@ -72,5 +72,12 @@ namespace LKS_Hotel
             if (result == DialogResult.Yes)
                 Application.Exit();
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            ReportGuess report = new ReportGuess();
+            this.Hide();
+            report.ShowDialog();
+        }
     }
 }

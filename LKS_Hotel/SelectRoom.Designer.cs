@@ -1,7 +1,7 @@
 ﻿
 namespace LKS_Hotel
 {
-    partial class Reservation
+    partial class SelectRoom
     {
         /// <summary>
         /// Required designer variable.
@@ -52,11 +52,33 @@ namespace LKS_Hotel
             this.panelreser = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.lblstay = new System.Windows.Forms.Label();
+            this.dgv_avail = new System.Windows.Forms.DataGridView();
+            this.dgv_selected = new System.Windows.Forms.DataGridView();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
+            this.labelcode = new System.Windows.Forms.Label();
+            this.lbltotal = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.lblcustomer = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panelreport.SuspendLayout();
             this.panelchart.SuspendLayout();
@@ -64,7 +86,8 @@ namespace LKS_Hotel
             this.panelreq.SuspendLayout();
             this.panelci.SuspendLayout();
             this.panelreser.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_avail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_selected)).BeginInit();
             this.SuspendLayout();
             // 
             // lbltime
@@ -75,7 +98,7 @@ namespace LKS_Hotel
             this.lbltime.Location = new System.Drawing.Point(238, -1);
             this.lbltime.Name = "lbltime";
             this.lbltime.Size = new System.Drawing.Size(44, 16);
-            this.lbltime.TabIndex = 11;
+            this.lbltime.TabIndex = 14;
             this.lbltime.Text = "Admin";
             // 
             // button2
@@ -87,7 +110,7 @@ namespace LKS_Hotel
             this.button2.Location = new System.Drawing.Point(961, -1);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(40, 40);
-            this.button2.TabIndex = 10;
+            this.button2.TabIndex = 13;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -106,7 +129,7 @@ namespace LKS_Hotel
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 573);
-            this.panel1.TabIndex = 9;
+            this.panel1.TabIndex = 12;
             // 
             // lbladmin
             // 
@@ -340,86 +363,299 @@ namespace LKS_Hotel
             this.label1.TabIndex = 0;
             this.label1.Text = "";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(259, 238);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(718, 246);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(730, 200);
+            this.label13.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(251, 59);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(61, 19);
-            this.label13.TabIndex = 42;
-            this.label13.Text = "Search";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label13.Size = new System.Drawing.Size(70, 16);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Room Type";
             // 
-            // textBox1
+            // comboBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift SemiLight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(802, 200);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 23);
-            this.textBox1.TabIndex = 41;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(254, 79);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(330, 21);
+            this.comboBox1.TabIndex = 16;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(848, 490);
+            this.button3.Location = new System.Drawing.Point(288, 107);
             this.button3.Name = "button3";
-            this.button3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button3.Size = new System.Drawing.Size(129, 35);
-            this.button3.TabIndex = 43;
+            this.button3.Size = new System.Drawing.Size(254, 33);
+            this.button3.TabIndex = 17;
             this.button3.Text = "Select";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(638, 59);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(57, 16);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Check In";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(641, 79);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(330, 21);
+            this.dateTimePicker1.TabIndex = 19;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(641, 126);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(330, 21);
+            this.dateTimePicker2.TabIndex = 21;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(638, 106);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(65, 16);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "Check Out";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Bahnschrift SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(638, 153);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(50, 16);
+            this.label16.TabIndex = 22;
+            this.label16.Text = "Staying";
+            // 
+            // lblstay
+            // 
+            this.lblstay.AutoSize = true;
+            this.lblstay.Font = new System.Drawing.Font("Bahnschrift", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblstay.Location = new System.Drawing.Point(889, 154);
+            this.lblstay.Name = "lblstay";
+            this.lblstay.Size = new System.Drawing.Size(14, 14);
+            this.lblstay.TabIndex = 23;
+            this.lblstay.Text = "0";
+            // 
+            // dgv_avail
+            // 
+            this.dgv_avail.AllowUserToAddRows = false;
+            this.dgv_avail.AllowUserToDeleteRows = false;
+            this.dgv_avail.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_avail.Location = new System.Drawing.Point(254, 227);
+            this.dgv_avail.MultiSelect = false;
+            this.dgv_avail.Name = "dgv_avail";
+            this.dgv_avail.Size = new System.Drawing.Size(330, 257);
+            this.dgv_avail.TabIndex = 24;
+            this.dgv_avail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_avail_CellClick);
+            // 
+            // dgv_selected
+            // 
+            this.dgv_selected.AllowUserToAddRows = false;
+            this.dgv_selected.AllowUserToDeleteRows = false;
+            this.dgv_selected.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_selected.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column5,
+            this.Column4});
+            this.dgv_selected.Location = new System.Drawing.Point(641, 227);
+            this.dgv_selected.Name = "dgv_selected";
+            this.dgv_selected.ReadOnly = true;
+            this.dgv_selected.Size = new System.Drawing.Size(330, 257);
+            this.dgv_selected.TabIndex = 25;
+            this.dgv_selected.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_selected_CellClick);
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(259, 192);
+            this.button4.Location = new System.Drawing.Point(254, 493);
             this.button4.Name = "button4";
-            this.button4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button4.Size = new System.Drawing.Size(168, 35);
-            this.button4.TabIndex = 44;
-            this.button4.Text = "Add Customer";
+            this.button4.Size = new System.Drawing.Size(89, 33);
+            this.button4.TabIndex = 26;
+            this.button4.Text = ">>";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Reservation
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(107)))), ((int)(((byte)(255)))));
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Bahnschrift SemiLight", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Location = new System.Drawing.Point(641, 493);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(89, 33);
+            this.button5.TabIndex = 27;
+            this.button5.Text = "<<";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(406, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.TabIndex = 28;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(512, 12);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 21);
+            this.textBox2.TabIndex = 29;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(618, 12);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 21);
+            this.textBox3.TabIndex = 30;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(724, 12);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 21);
+            this.textBox4.TabIndex = 31;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Bahnschrift", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Location = new System.Drawing.Point(822, 517);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(149, 41);
+            this.button6.TabIndex = 32;
+            this.button6.Text = "Submit";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // labelcode
+            // 
+            this.labelcode.AutoSize = true;
+            this.labelcode.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcode.Location = new System.Drawing.Point(637, 20);
+            this.labelcode.Name = "labelcode";
+            this.labelcode.Size = new System.Drawing.Size(46, 19);
+            this.labelcode.TabIndex = 33;
+            this.labelcode.Text = "Code";
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.Location = new System.Drawing.Point(642, 200);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(45, 19);
+            this.lbltotal.TabIndex = 34;
+            this.lbltotal.Text = "Rp. 0";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Room Number";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Room Floor";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Long";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Total Price";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(732, 12);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 21);
+            this.textBox5.TabIndex = 35;
+            // 
+            // lblcustomer
+            // 
+            this.lblcustomer.AutoSize = true;
+            this.lblcustomer.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcustomer.Location = new System.Drawing.Point(250, 20);
+            this.lblcustomer.Name = "lblcustomer";
+            this.lblcustomer.Size = new System.Drawing.Size(46, 19);
+            this.lblcustomer.TabIndex = 36;
+            this.lblcustomer.Text = "Code";
+            // 
+            // SelectRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 570);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblcustomer);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.lbltotal);
+            this.Controls.Add(this.labelcode);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.dgv_selected);
+            this.Controls.Add(this.dgv_avail);
+            this.Controls.Add(this.lblstay);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.lbltime);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Reservation";
+            this.Name = "SelectRoom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reservation";
+            this.Text = "SelectRoom";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelreport.ResumeLayout(false);
@@ -434,7 +670,8 @@ namespace LKS_Hotel
             this.panelci.PerformLayout();
             this.panelreser.ResumeLayout(false);
             this.panelreser.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_avail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_selected)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -465,10 +702,32 @@ namespace LKS_Hotel
         private System.Windows.Forms.Panel panelreser;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label lblstay;
+        private System.Windows.Forms.DataGridView dgv_avail;
+        private System.Windows.Forms.DataGridView dgv_selected;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label labelcode;
+        private System.Windows.Forms.Label lbltotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label lblcustomer;
     }
 }

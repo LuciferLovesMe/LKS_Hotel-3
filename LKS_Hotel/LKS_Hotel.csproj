@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="CheckIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,12 @@
     <Compile Include="Reservation.Designer.cs">
       <DependentUpon>Reservation.cs</DependentUpon>
     </Compile>
+    <Compile Include="SelectRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectRoom.Designer.cs">
+      <DependentUpon>SelectRoom.cs</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +151,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils.cs" />
+    <EmbeddedResource Include="AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckIn.resx">
+      <DependentUpon>CheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainAdmin.resx">
       <DependentUpon>MainAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +180,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterRoomType.resx">
       <DependentUpon>MasterRoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReqItems.resx">
+      <DependentUpon>ReqItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reservation.resx">
+      <DependentUpon>Reservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectRoom.resx">
+      <DependentUpon>SelectRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>

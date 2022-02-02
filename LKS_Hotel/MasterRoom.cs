@@ -202,7 +202,7 @@ namespace LKS_Hotel
             {
                 if(cond == 1)
                 {
-                    SqlCommand command = new SqlCommand("insert into room values(" + comboBox1.SelectedValue + ", " + getnum() + ", " + textBox3.Text + ", '" + textBox4.Text + "')", connection);
+                    SqlCommand command = new SqlCommand("insert into room values(" + comboBox1.SelectedValue + ", " + getnum() + ", " + textBox3.Text + ", '" + textBox4.Text + "', 'avail')", connection);
                     try
                     {
                         connection.Open();

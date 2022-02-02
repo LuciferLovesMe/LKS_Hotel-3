@@ -31,6 +31,10 @@ namespace LKS_Hotel
         {
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbladmin = new System.Windows.Forms.Label();
+            this.panelreport = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panelchart = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
@@ -47,18 +51,14 @@ namespace LKS_Hotel
             this.panelreser = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panelreport = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbladmin = new System.Windows.Forms.Label();
             this.lbltime = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            this.panelreport.SuspendLayout();
             this.panelchart.SuspendLayout();
             this.panelcheck.SuspendLayout();
             this.panelreq.SuspendLayout();
             this.panelci.SuspendLayout();
             this.panelreser.SuspendLayout();
-            this.panelreport.SuspendLayout();
             this.SuspendLayout();
             // 
             // button2
@@ -90,6 +90,52 @@ namespace LKS_Hotel
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 573);
             this.panel1.TabIndex = 2;
+            // 
+            // lbladmin
+            // 
+            this.lbladmin.AutoSize = true;
+            this.lbladmin.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbladmin.ForeColor = System.Drawing.Color.White;
+            this.lbladmin.Location = new System.Drawing.Point(7, 6);
+            this.lbladmin.Name = "lbladmin";
+            this.lbladmin.Size = new System.Drawing.Size(55, 19);
+            this.lbladmin.TabIndex = 7;
+            this.lbladmin.Text = "Admin";
+            // 
+            // panelreport
+            // 
+            this.panelreport.Controls.Add(this.label11);
+            this.panelreport.Controls.Add(this.label12);
+            this.panelreport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panelreport.Location = new System.Drawing.Point(0, 414);
+            this.panelreport.Name = "panelreport";
+            this.panelreport.Size = new System.Drawing.Size(233, 71);
+            this.panelreport.TabIndex = 6;
+            this.panelreport.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(67, 27);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 19);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Report";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe MDL2 Assets", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(13, 21);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(47, 32);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "";
+            this.label12.Click += new System.EventHandler(this.label11_Click);
             // 
             // button1
             // 
@@ -279,49 +325,6 @@ namespace LKS_Hotel
             this.label1.Text = "";
             this.label1.Click += new System.EventHandler(this.panelreser_Click);
             // 
-            // panelreport
-            // 
-            this.panelreport.Controls.Add(this.label11);
-            this.panelreport.Controls.Add(this.label12);
-            this.panelreport.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panelreport.Location = new System.Drawing.Point(0, 414);
-            this.panelreport.Name = "panelreport";
-            this.panelreport.Size = new System.Drawing.Size(233, 71);
-            this.panelreport.TabIndex = 6;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(67, 27);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 19);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Report";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe MDL2 Assets", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(13, 21);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 32);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "";
-            // 
-            // lbladmin
-            // 
-            this.lbladmin.AutoSize = true;
-            this.lbladmin.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbladmin.ForeColor = System.Drawing.Color.White;
-            this.lbladmin.Location = new System.Drawing.Point(7, 6);
-            this.lbladmin.Name = "lbladmin";
-            this.lbladmin.Size = new System.Drawing.Size(55, 19);
-            this.lbladmin.TabIndex = 7;
-            this.lbladmin.Text = "Admin";
-            // 
             // lbltime
             // 
             this.lbltime.AutoSize = true;
@@ -341,12 +344,15 @@ namespace LKS_Hotel
             this.Controls.Add(this.lbltime);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Bahnschrift", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainFrontOffice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainFrontOffice";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panelreport.ResumeLayout(false);
+            this.panelreport.PerformLayout();
             this.panelchart.ResumeLayout(false);
             this.panelchart.PerformLayout();
             this.panelcheck.ResumeLayout(false);
@@ -357,8 +363,6 @@ namespace LKS_Hotel
             this.panelci.PerformLayout();
             this.panelreser.ResumeLayout(false);
             this.panelreser.PerformLayout();
-            this.panelreport.ResumeLayout(false);
-            this.panelreport.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

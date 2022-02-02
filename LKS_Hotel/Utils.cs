@@ -11,7 +11,7 @@ namespace LKS_Hotel
 {
     class Utils
     {
-        public static string conn = @"Data Source=asmodeus;Initial Catalog=latian_hotel;Integrated Security=True";
+        public static string conn = @"Data Source=desktop-00eposj;Initial Catalog=latian_hotel;Integrated Security=True";
     }
 
     class Encrypt
@@ -57,5 +57,12 @@ namespace LKS_Hotel
             command.ExecuteNonQuery();
             connection.Close();
         }
+    }
+
+    class Selected
+    {
+        public static int id { set; get; }
+        public static string name { set; get; }
+
     }
 }
