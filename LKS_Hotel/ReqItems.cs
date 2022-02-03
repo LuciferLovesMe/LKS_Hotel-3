@@ -57,6 +57,16 @@ namespace LKS_Hotel
 
         }
 
+        void counttotal()
+        {
+            int total = 0;
+            for (int i = 0; i < dataGridView1.RowCount; i++)
+            {
+                total += Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value);
+            }
+            lbltotal.Text = "Rp." + total.ToString();
+        }
+
         private void panelreser_Click(object sender, EventArgs e)
         {
             Reservation reservation = new Reservation();
@@ -150,6 +160,8 @@ namespace LKS_Hotel
                 dataGridView1.Rows[row].Cells[4].Value = textBox1.Text;
                 dataGridView1.Rows[row].Cells[5].Value = numericUpDown1.Value;
                 dataGridView1.Rows[row].Cells[6].Value = textBox2.Text;
+
+                counttotal();
             }
         }
 
@@ -163,6 +175,8 @@ namespace LKS_Hotel
             if (dataGridView1.CurrentRow.Selected)
             {
                 dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+
+                counttotal();
             }
         }
 
