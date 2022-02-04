@@ -88,7 +88,7 @@ namespace LKS_Hotel
                 MessageBox.Show("Check In date time must be less than check out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                string sql = "select * from rep where checkInDatetime >= '" + Convert.ToDateTime(dateTimePicker1.Value) + "' and checkoutDatetime <= '" + dateTimePicker2.Value + "'";
+                string sql = "select * from rep where checkInDatetime >= '" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "' and checkoutDatetime <= '" + dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss") + "'";
                 dataGridView1.DataSource = Command.GetData(sql);
             }
         }
@@ -97,9 +97,22 @@ namespace LKS_Hotel
         {
             if(dataGridView1.RowCount > 0)
             {
-                DataTable dt = new DataTable();
-                DataSet ds = new DataSet();
-                dt.Columns.Add("")
+                Microsoft.Office.Interop.Excel.Application application = new Microsoft.Office.Interop.Excel.Application();
+                application.Application.Workbooks.Add(Type.Missing);
+                for(int i = 0; i < dataGridView1.ColumnCount; i++)
+                {
+                    application.Cells[1, i + 1] = dataGridView1.Columns[i].HeaderText;
+                }
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    {
+                        application.Cells[i + 2, j + 1] = dataGridView1.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+
+                application.Columns.AutoFit();
+                application.Visible = true;
             }
         }
     }

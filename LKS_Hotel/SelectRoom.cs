@@ -29,7 +29,7 @@ namespace LKS_Hotel
             textBox2.Visible = false;
             textBox3.Visible = false;
             textBox4.Visible = false;
-            textBox5.Visible = false;
+            //textBox5.Visible = false;
             lbladmin.Text = Session.name;
             lbltime.Text = DateTime.Now.ToString("dddd, dd-MM-yyyy");
             lblcustomer.Text = "Customer's Name : " + Selected.name;
@@ -98,7 +98,7 @@ namespace LKS_Hotel
         {
             for(int i = 0; i < dgv_selected.RowCount; i++)
             {
-                total += Convert.ToInt32(dgv_selected.Rows[i].Cells[3].Value);
+                total += Convert.ToInt32(dgv_selected.Rows[i].Cells[4].Value);
             }
 
             lbltotal.Text = "Rp. " + total.ToString();
@@ -167,8 +167,8 @@ namespace LKS_Hotel
                 dgv_selected.Rows[rows].Cells[0].Value = Convert.ToInt32(textBox1.Text);
                 dgv_selected.Rows[rows].Cells[1].Value = textBox2.Text;
                 dgv_selected.Rows[rows].Cells[2].Value = textBox3.Text;
-                dgv_selected.Rows[rows].Cells[4].Value = lblstay.Text;
-                dgv_selected.Rows[rows].Cells[3].Value = (Convert.ToInt32(textBox4.Text) * Convert.ToInt32(lblstay.Text)).ToString();
+                dgv_selected.Rows[rows].Cells[3].Value = lblstay.Text;
+                dgv_selected.Rows[rows].Cells[4].Value = (Convert.ToInt32(textBox4.Text) * Convert.ToInt32(lblstay.Text)).ToString();
                 gettotal();
             }
         }
@@ -227,7 +227,7 @@ namespace LKS_Hotel
 
                 for(int i = 0; i < dgv_selected.RowCount; i++)
                 {
-                    sql = "insert into reservationRoom values(" + res_id + ", " + dgv_selected.Rows[i].Cells[0].Value + ", getdate(), " + Convert.ToInt32(dgv_selected.Rows[i].Cells[3].Value) + ", " + dgv_selected.Rows[i].Cells[4].Value + ", '" + Convert.ToDateTime(dateTimePicker1.Value) + "', '" + Convert.ToDateTime(dateTimePicker2.Value) + "')";
+                    sql = "insert into reservationRoom values(" + res_id + ", " + dgv_selected.Rows[i].Cells[0].Value + ", getdate(), " + Convert.ToInt32(dgv_selected.Rows[i].Cells[3].Value) + ", " + dgv_selected.Rows[i].Cells[4].Value + ", '" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "', '" + dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss") + "')";
                     Command.exec(sql);
 
                     sql = "update room set status = 'unavail' where id = " + dgv_selected.Rows[i].Cells[0].Value;

@@ -92,6 +92,7 @@ namespace LKS_Hotel
             this.button2.TabIndex = 16;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -129,6 +130,7 @@ namespace LKS_Hotel
             this.panelreport.Name = "panelreport";
             this.panelreport.Size = new System.Drawing.Size(233, 71);
             this.panelreport.TabIndex = 6;
+            this.panelreport.Click += new System.EventHandler(this.label11_Click);
             // 
             // label11
             // 
@@ -140,6 +142,7 @@ namespace LKS_Hotel
             this.label11.Size = new System.Drawing.Size(58, 19);
             this.label11.TabIndex = 1;
             this.label11.Text = "Report";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label12
             // 
@@ -151,6 +154,7 @@ namespace LKS_Hotel
             this.label12.Size = new System.Drawing.Size(47, 32);
             this.label12.TabIndex = 0;
             this.label12.Text = "";
+            this.label12.Click += new System.EventHandler(this.label11_Click);
             // 
             // button1
             // 
@@ -163,6 +167,7 @@ namespace LKS_Hotel
             this.button1.TabIndex = 6;
             this.button1.Text = "Logout";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panelchart
             // 
@@ -206,6 +211,7 @@ namespace LKS_Hotel
             this.panelcheck.Name = "panelcheck";
             this.panelcheck.Size = new System.Drawing.Size(233, 71);
             this.panelcheck.TabIndex = 4;
+            this.panelcheck.Click += new System.EventHandler(this.panelcheck_Click);
             // 
             // label7
             // 
@@ -217,6 +223,7 @@ namespace LKS_Hotel
             this.label7.Size = new System.Drawing.Size(81, 19);
             this.label7.TabIndex = 1;
             this.label7.Text = "Check Out";
+            this.label7.Click += new System.EventHandler(this.panelcheck_Click);
             // 
             // label8
             // 
@@ -228,6 +235,7 @@ namespace LKS_Hotel
             this.label8.Size = new System.Drawing.Size(47, 32);
             this.label8.TabIndex = 0;
             this.label8.Text = "";
+            this.label8.Click += new System.EventHandler(this.panelcheck_Click);
             // 
             // panelreq
             // 
@@ -238,6 +246,7 @@ namespace LKS_Hotel
             this.panelreq.Name = "panelreq";
             this.panelreq.Size = new System.Drawing.Size(233, 71);
             this.panelreq.TabIndex = 3;
+            this.panelreq.Click += new System.EventHandler(this.panelreq_Click);
             // 
             // label5
             // 
@@ -249,6 +258,7 @@ namespace LKS_Hotel
             this.label5.Size = new System.Drawing.Size(144, 19);
             this.label5.TabIndex = 1;
             this.label5.Text = "Request Add Items";
+            this.label5.Click += new System.EventHandler(this.panelreq_Click);
             // 
             // label6
             // 
@@ -260,6 +270,7 @@ namespace LKS_Hotel
             this.label6.Size = new System.Drawing.Size(47, 32);
             this.label6.TabIndex = 0;
             this.label6.Text = "";
+            this.label6.Click += new System.EventHandler(this.panelreq_Click);
             // 
             // panelci
             // 
@@ -270,6 +281,7 @@ namespace LKS_Hotel
             this.panelci.Name = "panelci";
             this.panelci.Size = new System.Drawing.Size(233, 71);
             this.panelci.TabIndex = 2;
+            this.panelci.Click += new System.EventHandler(this.panelci_Click);
             // 
             // label3
             // 
@@ -281,6 +293,7 @@ namespace LKS_Hotel
             this.label3.Size = new System.Drawing.Size(70, 19);
             this.label3.TabIndex = 1;
             this.label3.Text = "Check In";
+            this.label3.Click += new System.EventHandler(this.panelci_Click);
             // 
             // label4
             // 
@@ -292,6 +305,7 @@ namespace LKS_Hotel
             this.label4.Size = new System.Drawing.Size(47, 32);
             this.label4.TabIndex = 0;
             this.label4.Text = "";
+            this.label4.Click += new System.EventHandler(this.panelci_Click);
             // 
             // panelreser
             // 
@@ -303,6 +317,7 @@ namespace LKS_Hotel
             this.panelreser.Name = "panelreser";
             this.panelreser.Size = new System.Drawing.Size(233, 71);
             this.panelreser.TabIndex = 0;
+            this.panelreser.Click += new System.EventHandler(this.panelreser_Click);
             // 
             // label2
             // 
@@ -314,6 +329,7 @@ namespace LKS_Hotel
             this.label2.Size = new System.Drawing.Size(96, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "Reservation";
+            this.label2.Click += new System.EventHandler(this.panelreser_Click);
             // 
             // label1
             // 
@@ -325,6 +341,7 @@ namespace LKS_Hotel
             this.label1.Size = new System.Drawing.Size(47, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "";
+            this.label1.Click += new System.EventHandler(this.panelreser_Click);
             // 
             // label13
             // 
