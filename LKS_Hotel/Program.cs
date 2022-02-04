@@ -16,7 +16,7 @@ namespace LKS_Hotel
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CheckOut());
+            Application.Run(new ReportChart());
         }
     }
 }

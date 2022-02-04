@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -183,6 +184,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MasterRoomType.resx">
       <DependentUpon>MasterRoomType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportChart.resx">
+      <DependentUpon>ReportChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportGuess.resx">
+      <DependentUpon>ReportGuess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReqItems.resx">
       <DependentUpon>ReqItems.cs</DependentUpon>

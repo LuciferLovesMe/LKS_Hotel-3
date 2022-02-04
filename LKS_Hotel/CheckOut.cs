@@ -177,13 +177,14 @@ namespace LKS_Hotel
                     charge = Convert.ToInt32(tbcomp.Text);
                 }
                 dataGridView1.Rows[rows].Cells[0].Value = Convert.ToInt32(comboBox1.SelectedValue);
-                dataGridView1.Rows[rows].Cells[1].Value = comboBox2.SelectedValue;
-                dataGridView1.Rows[rows].Cells[2].Value = comboBox2.Text;
-                dataGridView1.Rows[rows].Cells[3].Value = comboBox3.SelectedValue;
-                dataGridView1.Rows[rows].Cells[4].Value = comboBox3.Text;
-                dataGridView1.Rows[rows].Cells[5].Value = numericUpDown1.Value;
-                dataGridView1.Rows[rows].Cells[6].Value = txtsub.Text;
-                dataGridView1.Rows[rows].Cells[7].Value = charge;
+                dataGridView1.Rows[rows].Cells[1].Value = comboBox1.Text;
+                dataGridView1.Rows[rows].Cells[2].Value = comboBox2.SelectedValue;
+                dataGridView1.Rows[rows].Cells[3].Value = comboBox2.Text;
+                dataGridView1.Rows[rows].Cells[4].Value = comboBox3.SelectedValue;
+                dataGridView1.Rows[rows].Cells[5].Value = comboBox3.Text;
+                dataGridView1.Rows[rows].Cells[6].Value = numericUpDown1.Value;
+                dataGridView1.Rows[rows].Cells[7].Value = txtsub.Text;
+                dataGridView1.Rows[rows].Cells[8].Value = charge;
             }
             else
             {
@@ -226,9 +227,21 @@ namespace LKS_Hotel
             {
                 for(int i = 0; i < dataGridView1.RowCount; i++)
                 {
-                    string sql = "insert into reservationCheckOut values("+reser_id+",)"
+                    string sql = "insert into reservationCheckOut values(" + Convert.ToInt32(dataGridView1.Rows[i].Cells[0].Value) + "," + Convert.ToInt32(dataGridView1.Rows[i].Cells[2].Value) + ", " + Convert.ToInt32(dataGridView1.Rows[i].Cells[4].Value) + ", " + Convert.ToInt32(dataGridView1.Rows[i].Cells[6].Value) + ", " + Convert.ToInt32(dataGridView1.Rows[i].Cells[8].Value) + ")";
+                    Command.exec(sql);
 
+                    string com = "update room set status = 'avail' where roomNumber = " + Convert.ToInt32(dataGridView1.Rows[i].Cells[1].Value);
+                    Command.exec(com);
                 }
+
+                MessageBox.Show("Successfully checked out", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                numericUpDown1.Value = 0;
+                dataGridView1.DataSource = null;
+                dataGridView1.Rows.Clear();
+                loadroom();
+                comboBox2.DataSource = null;
+                dataGridView2.DataSource = null;
+                dataGridView2.Rows.Clear();
             }
         }
 
